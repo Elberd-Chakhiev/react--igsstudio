@@ -1,0 +1,20 @@
+[
+    {
+        "title": "telegram",
+        "id": 0,
+        "src": "./img/header/tg.svg", 
+        "link": "https://t.me/garsiashapiro"
+    }, 
+    {
+        "title": "whatsapp",
+        "id": 1,
+        "src": "./img/header/whts.svg", 
+        "link": "https://wa.me/+79043321537"
+    },
+    {
+        "title": "vk",
+        "id": 2,
+        "src": "./img/header/vk.svg", 
+        "link": "https://vk.com/garsiashapiro"
+    }
+]

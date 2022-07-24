@@ -1,0 +1,12 @@
+.igs__heading {
+  text-shadow: 4px 4px 0px #6d9886;
+}
+
+.igs__heading_second_color {
+  text-shadow: 4px 4px 0px rgb(246 246 246 / var(--tw-text-opacity));
+}
+
+.lines {
+  @apply w-96 h-8 absolute  
+  z-10 rounded-lg -skew-y-6;
+}

@@ -1,0 +1,5 @@
+.format_text {
+}
+.format_text > span {
+  @apply inline-block;
+}

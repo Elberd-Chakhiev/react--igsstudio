@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  @apply relative bg-dark--theme -z-50;
+}
+.container {
+  @apply max-w-[1280px]  mx-auto font-['Montserrat'];
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img,
+svg {
+  @apply w-full h-auto;
+}
+
+#logo {
+  @apply flex justify-around text-2xl items-center relative
+         transition-all hover:text-dark--theme 
+         text-white--theme xl:text-lg before:absolute before:top-1/2 
+         before:-translate-y-1/2  before:transition-all
+         before:left-0 before:w-16 xl:before:w-12 before:h-full 
+         before:bg-main_color before:content-['']
+         before:rounded-lg hover:before:w-full;
+}
+
+.li--menu {
+  @apply mx-1  relative z-10 hover:text-dark--theme rounded-lg
+         p-4 block xl:p-2 xl:text-sm
+         transition-all before:transition-all overflow-hidden 
+         before:absolute before:bottom-0 before:left-0 
+         before:w-full before:h-full before:content-['']
+         before:rounded-lg  before:-z-10 hover:before:-translate-y-0;
+}
+
+li > .active {
+  @apply before:-translate-y-0 before:bg-main_color text-dark--theme;
+}
+
+.burger {
+  @apply w-full h-screen bg-main_color transition-all
+         fixed top-0 left-0 z-20 flex items-center justify-between;
+}
+.ul-menu {
+  @apply flex justify-between text-white--theme font-semibold 
+         lg:flex-col lg:text-center lg:mx-auto lg:fixed lg:top-0 
+         lg:left-0 lg:bg-main_color lg:z-20
+         lg:w-full lg:h-full lg:justify-center;
+}
+.contacts--page-input {
+  @apply overflow-hidden rounded-lg before:content-[''] 
+         before:w-full before:h-full 
+         before:bg-dark--theme before:rounded-lg
+         before:absolute before:top-0 
+         before:left-0 before:z-0 before:transition-all
+         before:duration-500
+ 
+         after:content-[''] after:w-full after:h-full 
+         after:bg-main_color after:rounded-lg
+         after:absolute after:top-0 after:left-0 
+         after:z-0 after:-translate-x-full after:transition-all
+         after:duration-500;
+}
+.contacts--page-input:hover {
+  @apply before:translate-x-full after:translate-x-0;
 }

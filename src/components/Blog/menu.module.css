@@ -1,0 +1,28 @@
+.menu_categories__item {
+  @apply relative z-10 w-full rounded-lg mb-2 overflow-hidden
+  before:transition-all after:transition-all
+  before:duration-200 after:duration-500
+  before:absolute before:top-0 left-0 before:-z-10
+  before:w-full before:h-full before:rounded-lg before:bg-dark--theme
+  after:absolute after:top-0 after:left-0 after:-z-10
+  after:w-full after:h-full after:rounded-lg lg:w-1/3 lg:mr-2;
+}
+
+.menu__li {
+  @apply after:bg-main_color after:-translate-x-full
+  hover:before:-translate-x-full
+  hover:after:-translate-x-0;
+}
+.menu__li > span,
+.active_menu__li > span {
+  @apply z-10 rounded-lg inline-block p-2 w-full h-full 
+  transition-all
+  text-white--theme hover:text-dark--theme;
+}
+.active_menu__li > span {
+  @apply text-dark--theme font-bold;
+}
+.active_menu__li {
+  @apply after:bg-main_color before:-translate-x-full
+  after:-translate-x-0;
+}
